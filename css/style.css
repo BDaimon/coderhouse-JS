@@ -252,11 +252,11 @@ color:#3483fa;
 }
 
 .redes img {
-  width: 50px;
+  width: 40px;
 }
 
 .redes {
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -480,27 +480,7 @@ p {
   justify-content: center;
 }
 
-.container_boton {
-  width: 100%;
-  margin-top: 25px;
-  margin-left: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: nowrap;
-}
 
-.check {
-  width: 30px;
-  height: 15px;
-}
-
-.boton_formulario {
-  width: 100px;
-  height: 40px;
-  margin: 0 40px 40px 0;
-}
 
 .comentario {
   color: black;
