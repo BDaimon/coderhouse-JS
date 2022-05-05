@@ -1,0 +1,93 @@
+/*PARA EXTEND*/
+.transparencia {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  /*-----------------------------------------------------------------------------------------------*/
+  /*EXTEND*/
+  .tituloGrid {
+    @extend .transparencia;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    border: $border;
+  }
+  
+  .nombre {
+    @extend .transparencia;
+    text-align: center;
+    margin-top: 20px;
+    border: $border;
+  }
+  
+  .del-todo-pago {
+    @extend .transparencia;
+    width: $ancho-max;
+    color: black;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    font-family: $medium-text;
+    align-items: center;
+    border: $border;
+    margin-bottom: 10px;
+  }
+  
+  .titulo_productos {
+    @extend .transparencia;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    border: $border;
+  }
+  .container_tituloContac {
+    @extend .transparencia;
+    width: $ancho-max;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: $border;
+  }
+  .container_titulo {
+    @extend .transparencia;
+    border: $border;
+  }
+  
+  .card_container {
+    @extend .transparencia;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: $border;
+    border-radius: 20px;
+    justify-content: center;
+    margin: 10px 10px;
+  }
+  
+  .container_galeria {
+    @extend .transparencia;
+    border: $border;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+  .productos {
+    @extend .transparencia;
+    width: 200px;
+    height: 320px;
+    margin: 40px;
+    border-radius: 3px;
+    border: $border;
+  }

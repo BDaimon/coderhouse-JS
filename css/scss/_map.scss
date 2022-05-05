@@ -1,0 +1,24 @@
+
+$bgColor:(
+    textArea:$color-white,
+    nav:$color-red-bar,
+    footer:$color-fondo,
+);
+
+
+
+
+.text-area{
+    background-color: map-get($map: $bgColor , $key:textArea );
+}
+
+input{
+    background-color: map-get($map: $bgColor, $key:textArea );
+}
+ul {
+    background-color: map-get($map: $bgColor, $key:nav );
+}
+
+.foot{
+    background-color: map-get($map: $bgColor, $key:footer );
+}

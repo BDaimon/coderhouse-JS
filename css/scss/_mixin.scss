@@ -1,0 +1,25 @@
+/*MIXIN*/
+@mixin class_title($size, $color, $fontF, $flex, $color-fondo) {
+    font-size: $size;
+    color: $color;
+    font-family: $fontF;
+    display: $flex;
+    background-color: $color-fondo;
+  }
+  @mixin class_video($width, $mb, $fontF, $flex, $fd) {
+    width: $ancho-max;
+    margin-bottom: 30px;
+    font-family: $medium-text;
+    display: flex;
+    flex-direction: row;
+  }
+  .title {
+    @include class_title(25px, $color-white, $small-text, flex, $color-fondo);
+    padding: 10px 10px;
+  }
+  .video {
+    @include class_video($ancho-max, 30px, $medium-text, flex, row);
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+  }

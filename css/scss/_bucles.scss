@@ -1,0 +1,18 @@
+/*CONDICIONALES Y BUCLES*/
+
+$color-fondo: #2fc4b2;
+$color-red-bar: #fd5d5d;
+$color-white: #eeeeee;
+$ancho-max:100%;
+
+h1, h2{
+    @if ($color-white==$color-red-bar){
+        color: green;
+    }@else if ($color-fondo != $color-white){
+        color:#2fc4b2;
+    }@else{
+        color: blue;
+    }
+}
+
+

@@ -1,3 +1,9 @@
+@import "css/scss/var";
+@import "css/scss/mixin";
+@import "css/scss/extend";
+@import "css/scss/map";
+@import "css/scss/bucles";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,22 +11,24 @@
 }
 
 body {
-  background-image: url(../image/fondo-superior.png);
+  background-image: url(/image/subtle-prism.svg);
+  background-attachment: fixed;
+  /*background-repeat: no-repeat;*/
 }
 
 .barra {
-  width: 100%;
-  background-color: #2fc4b2;
+  width: $ancho-max;
+  background-color: $color-fondo;
   display: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $size-media-queris) {
   .botones {
     display: none;
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: $size-media-queris) {
   .bar-sup {
     display: none;
   }
@@ -28,16 +36,14 @@ body {
 
 h1 {
   margin-top: 20px;
-  color: #ff008e;
-  ;
-  font-family: "Bree Serif", serif;
+  font-family: $big-text;
   font-weight: 900;
-  font-size: 47px;
+  font-size: 45px;
 }
 
 h3 {
-  color: #ff008e;
-  font-family: "Bree Serif", serif;
+  color: $color-fondo;
+  font-family: $big-text;
   font-weight: 900;
   font-size: 45px;
 }
@@ -52,39 +58,40 @@ li {
   margin: 10px;
 }
 
-.tituloGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.content_gridNombre {
+  width: 90%;
+  margin: auto;
+}
 
-  .content_gridNombre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
+.content_gridNombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-top: 10px;
+  margin-top: 10px;
 
-    .mascota {
-      width: 20%;
-    }
+  .mascota {
+    width: 20%;
+  }
 
-    .comida {
-      width: 10%;
-    }
+  .comida {
+    width: 10%;
+  }
 
-    .descripcion_bulldog {
-      color: #010408;
-      font-size: 16px;
-      font-family: 'Roboto', sans-serif;
-    }
+  .descripcion_bulldog {
+    color: $color-fondo;
+    font-size: 20px;
+    font-family: $small-text;
   }
 }
 
-.nombre {
+.nombre_logo {
   text-align: center;
 }
 
 /*ANIMACION EN LOGO*/
 .logo {
-  border: solid 7px #ff008e;
+  border: solid 7px $color-fondo;
   border-radius: 50%;
   width: 100px;
   animation-name: animacion-logo;
@@ -94,7 +101,7 @@ li {
 
   @keyframes animacion-logo {
     from {
-      transform: scale(1)
+      transform: scale(1);
     }
 
     50% {
@@ -107,14 +114,14 @@ li {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $size-media-queris) {
   .tituloGrid {
     grid-template-columns: 1fr;
   }
 }
 
 .head {
-  width: 100%;
+  width: $ancho-max;
 }
 
 .nombre.h1 {
@@ -128,10 +135,9 @@ li {
 }
 
 ul {
-  width: 100%;
-  font-family: "Bree Serif", serif;
+  width: $ancho-max;
+  font-family: $small-text;
   font-size: 18px;
-  background-color: #fd5d5d;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -139,7 +145,7 @@ ul {
   margin: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $size-media-queris) {
   ul {
     display: flex;
     flex-direction: column;
@@ -147,13 +153,12 @@ ul {
   }
 }
 
-
 .container-fluid {
   display: flex;
   flex-direction: column;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $size-media-queris) {
   .navbar {
     display: flex;
     flex-direction: column;
@@ -168,23 +173,23 @@ a {
 a:hover,
 a:focus {
   color: #eeeeee;
-  text-decoration: none;
+}
+.p-seleccionados{
+  text-align: center;
+  font-size: 35px;
 }
 
-.title {
-  font-family: "Bree Serif", serif;
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  background-color: #fd5d5d;
-  color: #eeeeee;
-  padding: 15px 15px;
+.container_tituloProductos {
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
 /*CARRUSEL*/
 .container-carrusel {
-  background: linear-gradient(40deg, #fd5d5d, #3483fa, #2fc4b2, #fd5d5d);
+  background: linear-gradient($color-fondo);
   margin: 15px;
+  border-radius: 30px;
 
   .foto_carrusel {
     width: 55%;
@@ -196,53 +201,18 @@ a:focus {
   .carousel-inner {
     text-align: center;
   }
-
-}
-
-.video {
-  width: 100%;
-  margin-bottom: 30px;
-  font-family: "Bree Serif", serif;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
 }
 
 .reparto_detopa {
   width: 30%;
 }
 
-.del-todo-pago {
-  width: 100%;
-  background-color: #fd5d5d;
-  color: #eeeeee;
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  font-family: "Bree Serif", serif;
-  align-items: center;
-
-  .contenido1 {
-    width: 310px;
-  }
-
-  .contenido2 {
-    width: 310px;
-  }
-
-  .contenido3 {
-    width: 310px;
-  }
+.contenido {
+  width: 310px;
 }
 
 /*FOOTER*/
 .foot {
-  background-color: #2fc4b2;
-
   .redes img {
     width: 40px;
   }
@@ -258,7 +228,7 @@ a:focus {
 }
 
 .foot_container_logo {
-  width: 100%;
+  width: $ancho-max;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -268,19 +238,19 @@ a:focus {
 
 .logo_foot {
   width: 50px;
-  border: solid 2.5px #ff008e;
+  border: solid 2.5px $color-fondo;
   border-radius: 50%;
 }
 
-h4 {
-  font-family: "Bree Serif", serif;
-  color: white;
-  text-align: center;
-  margin: 10px 10px 20px 10px;
+h2 {
+  font-family: $big-text;
 }
 
-.container_servicios {
-  background-color: #f7f5f2;
+h4 {
+  font-family: $medium-text;
+  color: white;
+  text-align: center;
+  margin: 10px 10px;
 }
 
 .container_tips {
@@ -288,29 +258,17 @@ h4 {
   padding-top: 20px;
 }
 
-.card {
-  width: 100%;
+.card_tips {
+  width: $ancho-max;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
 }
 
-.card_container {
-  background-color: #cfffdc;
-  width: 30%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border: solid gray 1px;
-  border-radius: 20px;
-  justify-content: center;
-  margin: 10px 10px;
-}
-
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $size-media-queris) {
   .card_container {
-    width: 100%;
+    width: $ancho-max;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -318,7 +276,7 @@ h4 {
 }
 
 .container_tips {
-  color: #ff008e;
+  color: $color-fondo;
 }
 
 .tips {
@@ -330,24 +288,15 @@ img {
 }
 
 p {
-  width: 100%;
-  font-family: "Bree Serif", serif;
+  width: $ancho-max;
+  font-family: $small-text;
   text-align: center;
   margin: 4px;
 }
 
 .titulo {
   text-decoration: none;
-  font-size: 40px;
 }
-
-.titulo_productos {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
 
 @media screen and (max-width: 720px) {
   .titulo_productos {
@@ -356,33 +305,13 @@ p {
   }
 }
 
-.container_titulo {
-  width: 100%;
-  background-color: #d3dedc;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .container_direccion {
-    width: 75%;
-    background-color: #2fc4b2;
-    border-radius: 7px;
-  }
-
+.container_direccion {
+  width: 60%;
 }
 
 .container_ofertas {
-  width: 100%;
-  background-color: #d3dedc;
+  width: $ancho-max;
   text-align: center;
-}
-
-.logo_productos {
-  border: solid 3px #ff008e;
-  border-radius: 50%;
-  width: 90px;
-  align-content: center;
 }
 
 .sub_logo {
@@ -390,37 +319,27 @@ p {
 }
 
 .ofertas {
-  color: #ff008e;
+  color: $color-fondo;
   text-decoration: none;
-  line-height: 70px;
+  line-height: 50px;
+  margin-top: 12%;
 }
 
 .cotiza {
   text-align: center;
-  width: 100%;
-  background-color: #fd5d5d;
+  width: $ancho-max;
+  background-color: $color-fondo;
+  margin-top: 20px;
 }
 
 .boton_cotiza {
   font-size: 30px;
   color: #eeeeee;
-  font-family: "Montserrat", sans-serif;
+  font-family: $small-text;
 }
 
 .boton_cotiza:hover {
   color: #eeeeee;
-}
-
-.productos_section {
-  background-color: #d3dedc;
-}
-
-.productos {
-  border: solid gray 2px;
-  width: 200px;
-  height: 300px;
-  margin: 40px;
-  border-radius: 3px;
 }
 
 .container_productos {
@@ -451,30 +370,33 @@ p {
   text-transform: capitalize;
   color: #fff;
   border-radius: 5px;
-  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
-    Arial, sans-serif;
-  font-size: 16px;
-  letter-spacing: 1.5px;
+  font-family: $small-text;
+  letter-spacing: 1px;
 }
 
-
 .form_container {
-  background-color: #2fc4b2;
-  width: 100%;
+  width: $ancho-max;
   display: flex;
   flex-direction: column;
 
   .titulo_form_text {
-    color: black;
+    color: #eeeeee;
+  }
+
+  .titulo_form {
+    background-color: $color-fondo;
+    margin: 10px 0  10px 0 ;
+    padding: 5px;
   }
 
   .form_box {
-    width: 100%;
+    width: $ancho-max;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -493,49 +415,43 @@ p {
 }
 
 .direccion {
-  width: 100%;
+  width: $ancho-max;
   margin-bottom: 20px;
   display: flex;
-}
-
-.form {
-  background-color: #2fc4b2;
-  display: flex;
+  flex-direction: column;
 }
 
 .quienes_container {
-  margin-top: 40px;
   text-align: center;
-  font-family: "Bree Serif", serif;
 }
 
 .quienes_somos {
   justify-content: center;
-  width: 100%;
+  width: $ancho-max;
   text-align: center;
   line-height: 20px;
 }
 
 .container_empresa {
-  width: 100%;
+  width: $ancho-max;
   display: flex;
   justify-content: center;
 
   .empresa {
     width: 70%;
-    margin-top: 30px;
+    padding: 10px;
     text-align: center;
-    border: #2fc4b2 solid 1px;
+    border: gray solid 1px;
   }
 }
 
 .titulo_quienes {
-  color: #ff008e;
   font-size: 40px;
+  color: $color-fondo;
 }
 
 .fabrica {
-  width: 100%;
+  width: $ancho-max;
 }
 
 .grid_galeria {
@@ -544,20 +460,11 @@ p {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
+}
 
-  .container_galeria {
-    border: #2fc4b2 solid 1px;
-    padding: 10px;
+@media screen and (max-width: $size-media-queris) {
+  .grid_galeria {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 5px;
-
-    @media screen and (max-width: 720px) {
-      .grid_galeria {
-        display: flex;
-        flex-direction: column;
-      }
-    }
   }
 }
