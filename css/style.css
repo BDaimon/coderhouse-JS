@@ -272,6 +272,7 @@ a:focus {
   height: auto;
   text-align: center; }
 
+
 /*CARRUSEL*/
 .container-carrusel {
   background: linear-gradient(#2fc4b2);
@@ -382,11 +383,46 @@ p {
 .sub_logo {
   text-decoration: none; }
 
+  .carrito{
+    width: 5%;
+  }
+.list-group{
+  background: none;
+}
+.carrito{
+  display: block;
+}
+
+#listadoProd{
+  display: flex;
+  flex-direction: column;
+  background: none;
+  text-align: center;
+}
+.tituloP{
+  text-align: center;
+  color: #3483fa;
+}
+.carro{
+  text-align: center;
+}
+.imgCarrito{
+  width: auto;
+  }
+
+  #listadoCarrito{
+    background:none ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #3483fa;
+  }
+
 .ofertas {
   color: #3483fa;
   text-decoration: none;
-  line-height: 70px;
-  margin-top: 5%; }
+  line-height: 20px;
+  }
 
 .cotiza {
   text-align: center;
