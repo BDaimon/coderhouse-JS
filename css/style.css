@@ -4,6 +4,55 @@
 /*FONT*/
 /*-----------------------------------------------------------------------------------------------*/
 /*MIXIN*/
+.enCarrito{
+  width:40rem;
+  background-color: aquamarine;
+  display: flex;
+  /* flex-direction: row; */
+  text-align: center;
+  /* margin: 1px; */
+  align-items: center;
+  padding: 5px;
+}
+.modal-carrito{
+  width: 40rem;
+  height: auto;
+  text-align: center;
+}
+.modal-container{
+  width: auto;
+  background-color: #eeeeee;
+  display: flex;
+  position: fixed;
+  visibility: hidden;
+  z-index: 100;
+}
+#contenedorPro{
+  display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  margin: 20px auto;
+}
+.card{
+  width: 300px;
+  text-align: center;
+ 
+}
+.modal-active{
+  visibility: visible;
+}
+#open{
+  background-color:#fd5d5d;
+  border: none;
+}
+.boton_eliminar{
+  background-color: aquamarine;
+  border: none;
+}
+/* .modal-container{
+  position: fixed;
+  opacity: 0;
+} */
 .title {
   font-size: 25px;
   color: #eeeeee;
@@ -64,6 +113,9 @@
   flex-wrap: nowrap;
   margin-top: 20px;
   border: solid gray 1px; }
+
+
+
 
 .container_tituloContac {
   width: 100%;
@@ -389,35 +441,11 @@ p {
 .list-group{
   background: none;
 }
-.carrito{
-  display: block;
-}
 
-#listadoProd{
-  display: flex;
-  flex-direction: column;
-  background: none;
-  text-align: center;
-}
 .tituloP{
   text-align: center;
   color: #3483fa;
 }
-.carro{
-  text-align: center;
-}
-.imgCarrito{
-  width: auto;
-  }
-
-  #listadoCarrito{
-    background:none ;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    color: #3483fa;
-  }
-
 .ofertas {
   color: #3483fa;
   text-decoration: none;
@@ -536,3 +564,5 @@ p {
   .grid_galeria {
     display: flex;
     flex-direction: column; } }
+
+ 
