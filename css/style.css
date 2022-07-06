@@ -4,6 +4,25 @@
 /*FONT*/
 /*-----------------------------------------------------------------------------------------------*/
 /*MIXIN*/
+/* FORMULARIO PRODUCTO */
+
+.formularioPro{
+  width: 20rem;
+  text-align: center;
+  line-height: 15px;
+  padding: 10px;
+  margin: auto;
+}
+.inputColor{
+  background-color:aquamarine !important;
+
+}
+#encontrado{
+background-color: #eeeeee;
+position: absolute;
+display: flex;
+}
+
 .enCarrito{
   width:40rem;
   background-color: aquamarine;
@@ -34,7 +53,7 @@
   margin: 20px auto;
 }
 .card{
-  width: 300px;
+  width: 200px;
   text-align: center;
  
 }
@@ -108,9 +127,8 @@
   margin-bottom: 10px; }
 
 .titulo_productos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 20px;
   border: solid gray 1px; }
 
@@ -201,7 +219,9 @@ h3 {
   color: #2fc4b2;
   font-family: "Oswald", sans-serif;
   font-weight: 900; }
-
+.subTitulo{
+  font-size: 22px;
+}
 input {
   margin: 4px;
   width: 40%;
@@ -418,12 +438,16 @@ p {
   margin: 4px; }
 
 .titulo {
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 2rem;
+}
+  
 
 @media screen and (max-width: 720px) {
   .titulo_productos {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    align-items: center; } }
 
 .container_direccion {
   width: 60%; }
