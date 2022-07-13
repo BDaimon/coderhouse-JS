@@ -1,0 +1,112 @@
+[
+   {
+      "id": 1,
+      "poster": "/imagenCatalogo/balance cachorro.jpeg",
+      "titulo": "Vitalcan Balanced ",
+      "kilos": 3,
+      "descripcion": "Vitalcan Balanced Cachorro Raza Pequeña está indicado para cachorros de raza pequeña hasta 12 meses.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 2,
+      "poster": "/imagenCatalogo/2.jpeg",
+      "titulo": "NUTRIQUE ",
+      "kilos": 15,
+      "descripcion": "Nutrique Skin Sensitive es un alimento para perros adultos con sensibilidad cutánea.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 3,
+      "poster": "/imagenCatalogo/3.jpeg",
+      "titulo": "ACANA FREE RUN-POULTRY",
+      "kilos": 5.9,
+      "descripcion": "Acana Free Run-Poultry es un alimento elaborado con pollo de corral Cobb, pavo Tom y huevos enteros del nido en proporciones de PresaEntera.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 4,
+      "poster": "/imagenCatalogo/4.jpeg",
+      "titulo": "PRO PLAN KITTEN OPTISTART",
+      "kilos": 7.5,
+      "descripcion": "Pro Plan Kitten Optistart es una comida para gatitos de hasta doce meses de edad.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 5,
+      "poster": "/imagenCatalogo/5.jpeg",
+      "titulo": "OVEN-BAKED CHICKEN PATÉ LATA CAT FOOD",
+      "kilos": 0.156,
+      "descripcion": "Chicken Paté en lata es un alimento húmedo para gatos adultos. Formulado con pollo fresco.",
+      "tipo": "Alimento humedo"
+      
+   },
+   {
+      "id": 6,
+      "poster": "/imagenCatalogo/6.jpeg",
+      "titulo": "HILL´S I/D DIGESTIVE CARE FELINO",
+      "kilos": 1.8,
+      "descripcion": "Hill's® Prescription Diet® i/d Digestive Care Felino es un alimento formulado para apoyar la salud digestiva de su gato.",
+      "tipo": "Alimento humedo"
+      
+   },
+   {
+      "id": 7,
+      "poster": "/imagenCatalogo/7.jpeg",
+      "titulo": "BRAVERY - CHICKEN KITTEN",
+      "kilos": 2,
+      "descripcion": "Bravery Chicken Kitten es un alimento para gatitos. Libres de grano y cereales.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 8,
+      "poster": "/imagenCatalogo/8.jpeg",
+      "titulo": "BRAVERY - SALMON ADULT CAT",
+      "kilos": 7,
+      "descripcion": "Bravery son mono proteicos, con carne siempre como primer ingrediente y enriquecidos con antioxidantes.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 9,
+      "poster": "/imagenCatalogo/9.jpeg",
+      "titulo": "FIT FORMULA",
+      "kilos": 10,
+      "descripcion": "Fit Fórmula® Gato Adulto es un alimento que contiene todos los nutrientes esenciales para una alimentación completa y balanceada.",
+      "tipo": "Alimento seco"
+      
+   },
+  
+   {
+      "id": 10,
+      "poster": "/imagenCatalogo/10.jpeg",
+      "titulo": "PRO PLAN",
+      "kilos": 3,
+      "descripcion": "PRO PLAN® Puppy Sensitive Skin Lamb & Rice es un alimento indicado para cachorros con pieles sensibles.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 11,
+      "poster": "/imagenCatalogo/11.jpeg",
+      "titulo": "ORIJEN",
+      "kilos": 5.9,
+      "descripcion": "Orijen Original Dog es una comida biológicamente apropiada™ indicada para todos los perros en todas las etapas de su vida.",
+      "tipo": "Alimento seco"
+      
+   },
+   {
+      "id": 12,
+      "poster": "/imagenCatalogo/12.jpeg",
+      "titulo": "BRIT CARE",
+      "kilos": 12,
+      "descripcion": "Brit Care Adult Large Breed Lamb & Rice es un alimento hipoalergénico para perros adultos de razas grandes o gigantes (+25 kg).",
+      "tipo": "Alimento seco"
+      
+   }
+  
+]

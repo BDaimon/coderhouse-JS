@@ -11,7 +11,7 @@ const producto =[
     
     {id:2,
     nombre: "Master Dog",   
-    descripcion: "Alimento para perros adultos carne.", 
+    descripcion: "Alimento para perros adultos carne.",  
     precio:20000,
     img:"image-productos/masterdog.jpeg",
     cantidad:1},

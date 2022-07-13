@@ -18,9 +18,12 @@
 
 }
 #encontrado{
-background-color: #eeeeee;
-position: absolute;
-display: flex;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 60%;
 }
 
 .enCarrito{
@@ -46,16 +49,40 @@ display: flex;
   visibility: hidden;
   z-index: 100;
 }
+.catalogo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url();
+
+}
 #contenedorPro{
   display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   margin: 20px auto;
 }
+#contenidoCatalogo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 .card{
   width: 200px;
   text-align: center;
+  margin: 10px;
  
+}
+.preloader{
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
 }
 .modal-active{
   visibility: visible;
@@ -67,6 +94,14 @@ display: flex;
 .boton_eliminar{
   background-color: aquamarine;
   border: none;
+}
+#spinner{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.cara{
+  width: 100px;
 }
 /* .modal-container{
   position: fixed;
@@ -103,6 +138,7 @@ display: flex;
 /*-----------------------------------------------------------------------------------------------*/
 /*EXTEND*/
 .tituloGrid {
+  background-image: url(../image/okeykat-w6elADh_jww-unsplash\ \(1\).jpg);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
@@ -127,8 +163,9 @@ display: flex;
   margin-bottom: 10px; }
 
 .titulo_productos {
+  background-image: url(../image/okeykat-w6elADh_jww-unsplash\ \(1\).jpg);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
   border: solid gray 1px; }
 
@@ -136,6 +173,7 @@ display: flex;
 
 
 .container_tituloContac {
+  background-image: url(../image/okeykat-w6elADh_jww-unsplash\ \(1\).jpg);
   width: 100%;
   text-align: center;
   display: flex;
@@ -144,6 +182,7 @@ display: flex;
   border: solid gray 1px; }
 
 .container_titulo {
+  background-image: url(../image/okeykat-w6elADh_jww-unsplash\ \(1\).jpg);
   border: solid gray 1px; }
 
 .card_container {
@@ -213,6 +252,7 @@ body {
 h1 {
   margin-top: 10px;
   font-family: "Oswald", sans-serif;
+  text-align: center;
   font-weight: 900; }
 
 h3 {
@@ -250,6 +290,7 @@ li {
     font-family: "Roboto", sans-serif; }
 
 .nombre {
+  background-image: url(../image/okeykat-w6elADh_jww-unsplash\ \(1\).jpg);
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
 
@@ -296,6 +337,20 @@ li {
 .nombre.h1 {
   margin-top: 0; }
 
+.comentario{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botonComentario{
+  margin: 10px;
+ 
+}
+
 .formulario {
   padding: 20px;
   text-align: right;
@@ -340,9 +395,13 @@ a:focus {
   color: #3483fa; }
 
 .container_tituloProductos {
+  display: flex;
   width: 100%;
   height: auto;
-  text-align: center; }
+  /* text-align: center; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 
 /*CARRUSEL*/
@@ -536,15 +595,11 @@ p {
     justify-content: center;
     margin-bottom: 10px; }
 
-.comentario {
-  color: black; }
 
 .titulo_comentario {
   color: black; }
 
 #mensaje {
-  width: 70%;
-  margin-bottom: 20px;
   border-radius: 7px; }
 
 .direccion {
