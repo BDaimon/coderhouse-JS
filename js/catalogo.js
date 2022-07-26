@@ -32,31 +32,33 @@ const cardError = () => {
   </div>`
 }
 
-function traerContenido(URL) {
+const traerContenido = async (URL) => {
 
   let contenidoAmostrar = ""
-
-  fetch(URL)
-    .then((response) => response.json())
-    .then((dato) => {
-      //console.table(dato)
-      for (contenido of dato)
-        contenidoAmostrar += cardProductos(contenido)
-
-      contenidoCatalogo.innerHTML = contenidoAmostrar
-      
-   
-    })
-
-    .catch((error) => contenidoCatalogo.innerHTML = cardError())
-    .finally(() => preloader.innerHTML = "")
-
+  try {
+    const response = await fetch(URL)
+    const dato = await response.json()
+    for (contenido of dato)
+     contenidoAmostrar += cardProductos(contenido)
+     contenidoCatalogo.innerHTML = contenidoAmostrar
+     
+    } catch (error) {
+    contenidoCatalogo.innerHTML = cardError()
+    }finally{
+    preloader.innerHTML = ""
+  }
 
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    traerContenido(URL)
-  }, 2500)
+    traerContenido(URL) 
+  }, 2000)
 })
+
+
+
+
+
 
 

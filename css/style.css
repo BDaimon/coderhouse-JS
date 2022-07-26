@@ -3,7 +3,7 @@
 /*BORDER CARD*/
 /*FONT*/
 /*-----------------------------------------------------------------------------------------------*/
-/*MIXIN*/
+/*MIXIN*/ 
 /* FORMULARIO PRODUCTO */
 
 .formularioPro{
@@ -12,6 +12,18 @@
   line-height: 15px;
   padding: 10px;
   margin: auto;
+}
+.campoGreen input{
+  border: 1px solid;
+  border-color: green;
+}
+.campoRed p{
+  color: red;
+}
+
+.campoRed input{
+  border: 1px solid;
+  border-color: red;
 }
 .inputColor{
   background-color:aquamarine !important;

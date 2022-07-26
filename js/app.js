@@ -131,7 +131,7 @@ const alertVacio = (hecho) => {
 const actCarrito = () => {
   carritoContenedor.innerHTML = "";
 
-  carrito.forEach((producto) => {
+   carrito.forEach ((producto) => {
     const div = document.createElement("div");
     div.className = "enCarrito";
     div.innerHTML = `<h6>${producto.nombre}</h6>
