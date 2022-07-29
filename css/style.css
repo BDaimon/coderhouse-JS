@@ -98,6 +98,7 @@
 }
 .modal-active{
   visibility: visible;
+  position: absolute;
 }
 #open{
   background-color:#fd5d5d;

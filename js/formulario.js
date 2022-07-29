@@ -13,9 +13,10 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   validaCampos();
   formulario.reset()
+  
 });
+    
  
-
 const validaCampos = () => {
   const userName = inputNombre.value.trim();
   const userPhone = inputTelefono.value.trim();
@@ -47,7 +48,6 @@ const validaCampos = () => {
   } else {
     campoOk(inputEmail);
   }
-
 }
 
 const okEmail = (inputEmail) => {
@@ -59,24 +59,17 @@ const campoVacio = (input, mensaje) => {
   const aviso = input.parentElement
   const alerta = aviso.querySelector("p")
   alerta.innerText = mensaje
-
   aviso.className = "campoRed error";
 }
+
+
 const campoOk = (input) => {
   aviso = input.parentElement;
   aviso.className = "campoGreen ok";
 };
 
- const alertInput = (hecho, mensaje) => {
-  Swal.fire({
-    title: hecho,
-    text: mensaje, 
-    icon: "success",
-    toast: true,
-    timer: 5000,
-    position: "top",
-  });
-};
+
+
 
 function saveDateUsr() {
   const dateUsr = {

@@ -12,7 +12,12 @@ const cantidadCarrito = document.getElementById("contador-carrito");
 
 const encontrado = document.querySelector("#encontrado");
 
+const botonConfirmar = document.querySelector("#confirmar")
+
 let carrito = [];
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("carrito")) {
@@ -58,6 +63,43 @@ const agregarAlCarrito = (prodId) => {
   }
   actCarrito();
 };
+
+botonConfirmar.addEventListener("click", () =>{
+   localStorage.clear();
+    cerrarCarrito.click();
+
+  if (carrito == 0) {
+    carritoVacio("El Carrito esta vacio");
+  } else {
+    msjCompra(`¡Gracias por tu compra! El total de tu boleta es: ${totalCarrito.innerHTML}`,
+     "Completa el formulario para recibir las mejores ofertas.")
+  }
+  carrito.length = 0;
+  cantidadCarrito.length = 0;
+  actCarrito();
+})
+
+ 
+  const carritoVacio = (vacio) => {
+    Swal.fire({
+      title: vacio,
+      icon: "error",
+      toast: true,
+      position: "top",
+      timer:2000
+    });
+  };
+
+ const msjCompra = (alerta,msj) => {
+Swal.fire({
+  title: alerta,
+  text: msj,
+  icon: "success",
+  toast: true,
+  position: "top",
+});
+};
+
 
 spinnerCarrito = () => {
   return `
@@ -114,6 +156,7 @@ const vaciarCarrito = document.getElementById("vaciar");
 
 vaciarCarrito.addEventListener("click", () => {
   carrito.length = 0;
+  localStorage.clear()
   alertVacio("Tu carrito esta vacio");
   actCarrito();
 });
@@ -143,12 +186,18 @@ const actCarrito = () => {
     carritoContenedor.appendChild(div);
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    
   });
 
-  cantidadCarrito.innerText = carrito.length;
-
-  totalCarrito.innerText = carrito.reduce(
+     cantidadCarrito.innerText = carrito.length;
+ 
+    totalCarrito.innerText = carrito.reduce(
     (acc, producto) => acc + producto.precio * producto.cantidad,
     0
   );
 };
+
+  
+
+
+  
